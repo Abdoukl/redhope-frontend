@@ -1,0 +1,374 @@
+/* Auth-specific CSS - Scoped to prevent affecting other components */
+.auth-specific-container form {
+  width: 600px;
+  margin: 0 auto;
+  margin-top: 150px;
+  padding: 40px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.auth-specific-container form:hover {
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.2);
+}
+
+.auth-specific-container form h2 {
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: 900;
+  margin-bottom: 30px;
+  color: var(--NeutralVery_brown);
+}
+
+.auth-specific-container .form-row {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.auth-specific-container .form-group {
+  flex: 1;
+  margin-right: 25px;
+}
+
+.auth-specific-container .form-group:last-child {
+  margin-right: 0;
+}
+
+.auth-specific-container .sign-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.auth-specific-container .form-container {
+  flex: 1;
+  max-width: 400px;
+}
+
+.auth-specific-container .image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.auth-specific-container .image-container img {
+  max-width: 50%;
+  height: auto;
+}
+
+.auth-specific-container .logo img {
+  width: 100px;
+  height: 100px;
+  margin-top: -13px;
+}
+
+.auth-specific-container .logo {
+  display: flex;
+  margin-left: 170px;
+}
+
+/* Fix span that affects all pages */
+.auth-specific-container span {
+  color: rgb(255, 71, 71);
+}
+
+.auth-specific-container .logo > a {
+  color: var(--Primary_blue);
+  margin-left: -10px;
+}
+
+.auth-specific-container input,
+.auth-specific-container select {
+  display: block;
+  padding: 12px 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 1em;
+  width: 100%;
+  transition: border-color 0.3s ease;
+}
+
+/* Fix the global checkbox selector that was breaking dark mode toggle */
+/* Instead of hiding all checkboxes, only hide those in this container */
+.auth-specific-container input[type="checkbox"] {
+  display: none;
+}
+
+.auth-specific-container input:focus,
+.auth-specific-container select:focus {
+  border-color: rgb(255, 71, 71);
+  outline: none;
+  box-shadow: 0 0 8px rgba(255, 71, 71, 0.3);
+}
+
+.auth-specific-container input::placeholder {
+  color: rgb(182, 178, 178);
+  font-weight: var(--Weights_01);
+}
+
+.auth-specific-container label {
+  display: block;
+  margin: 10px 0 5px;
+  color: var(--NeutralVery_brown);
+  font-weight: var(--Weights_02);
+}
+
+.auth-specific-container .btn_loc {
+  margin-left: 1px;
+  font-size: 16px;
+  color: #fff;
+  background-color: rgb(255, 71, 71);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.auth-specific-container .btn_loc:hover {
+  background-color: darkred;
+}
+
+.auth-specific-container button {
+  margin-top: 20px;
+  border-radius: 5px;
+  border: 0;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.9em;
+  display: block;
+  padding: 12px 20px;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease;
+}
+
+.auth-specific-container button:hover {
+  cursor: pointer;
+}
+
+.auth-specific-container .error {
+  color: tomato;
+  font-size: 0.9em;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.auth-specific-container .input-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.auth-specific-container .input-icon .icon {
+  position: absolute;
+  left: 10px;
+  color: #999999;
+  transition: color 0.3s ease;
+  pointer-events: none;
+}
+
+.auth-specific-container .input-icon:hover .icon {
+  color: rgb(255, 71, 71);
+}
+
+.auth-specific-container .input-icon input,
+.auth-specific-container .input-icon select {
+  padding-left: 40px;
+}
+
+.auth-specific-container .password-toggle-icon {
+  position: absolute;
+  top: 50%;
+  right: 7px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: rgb(255, 71, 71);
+}
+
+.auth-specific-container .form-group {
+  margin-bottom: 1rem;
+}
+
+.auth-specific-container .blood-donor-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Restore a proper visible checkbox for the auth components */
+.auth-specific-container .blood-donor-label input[type="checkbox"] {
+  margin-left: -244px;
+  display: inline;
+}
+
+/* Fix the input[type="radio"] */
+.auth-specific-container .input-icon input[type="radio"] {
+  width: auto;
+  margin-right: 5px;
+  accent-color: rgb(255, 71, 71);
+}
+
+.auth-specific-container .input-icon label {
+  margin-right: 85px;
+  cursor: pointer;
+  display: inline;
+}
+
+/* Balloon Styles */
+.auth-specific-container .balloon {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  width: 100px;
+  height: auto;
+  animation: float 4s ease-in-out infinite;
+  display: block;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+.auth-specific-container .log_in {
+  margin: 20px auto;
+  width: 100%;
+  max-width: 200px;
+}
+
+/* Dark theme styles scoped to auth container */
+.dark-theme .auth-specific-container form {
+  background: var(--dark-card);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark-theme .auth-specific-container form:hover {
+  box-shadow: 0 12px 48px rgba(190, 27, 27, 0.2);
+}
+
+.dark-theme .auth-specific-container form h2 {
+  color: var(--dark-text);
+}
+
+.dark-theme .auth-specific-container .logo {
+  mix-blend-mode: hard-light;
+}
+
+.dark-theme .auth-specific-container span {
+  color: white;
+}
+
+.dark-theme .auth-specific-container .logo > a {
+  color: rgb(252, 158, 158);
+  margin-left: -10px;
+}
+
+.dark-theme .auth-specific-container input,
+.dark-theme .auth-specific-container select {
+  border: 1px solid var(--dark-border);
+  background-color: var(--dark-card);
+  color: var(--dark-text);
+}
+
+.dark-theme .auth-specific-container input:focus,
+.dark-theme .auth-specific-container select:focus {
+  border-color: var(--dark-accent);
+}
+
+.dark-theme .auth-specific-container input::placeholder {
+  color: var(--dark-placeholder);
+}
+
+.dark-theme .auth-specific-container label {
+  color: var(--dark-text);
+}
+
+.dark-theme .auth-specific-container .btn_loc {
+  background-color: var(--dark-accent);
+}
+
+.dark-theme .auth-specific-container button {
+  background-color: var(--dark-accent);
+}
+
+.dark-theme .auth-specific-container button:hover {
+  background-color: #8b0000;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .auth-specific-container form {
+    width: 90%;
+    margin-top: 140px;
+    padding: 20px;
+  }
+
+  .auth-specific-container .form-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .auth-specific-container .form-group {
+    margin-right: 0;
+  }
+
+  .auth-specific-container .logo {
+    margin-left: 0;
+    justify-content: center;
+  }
+
+  .auth-specific-container button {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .auth-specific-container .btn_loc {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .auth-specific-container .balloon {
+    top: 5%;
+    left: 5%;
+    width: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-specific-container form {
+    margin-top: 140px;
+    padding: 15px;
+  }
+
+  .auth-specific-container form h2 {
+    font-size: 2em;
+  }
+
+  .auth-specific-container input,
+  .auth-specific-container select {
+    font-size: 0.9em;
+  }
+
+  .auth-specific-container .logo img {
+    width: 80px;
+    height: 80px;
+    margin-top: 20px;
+  }
+
+  .auth-specific-container .btn_loc,
+  .auth-specific-container button {
+    font-size: 14px;
+  }
+
+  .auth-specific-container .balloon {
+    width: 60px;
+  }
+}
