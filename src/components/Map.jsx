@@ -475,6 +475,9 @@ export default function MapComponent() {
     );
   }
 
+  // Get API key from environment variables
+  const googleMapsApiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
+
   return (
     <>
       <Navbar />
@@ -495,7 +498,7 @@ export default function MapComponent() {
           
           <div className="map-container">
             <div className="hospital-map-content">
-              <APIProvider apiKey="AIzaSyAeTAUxWY5luBGsf-F6-vP8eDLqgjzmACg">
+              <APIProvider apiKey={googleMapsApiKey}>
                 <Map
                   ref={mapRef}
                   mapId={isDarkMode ? "8f51571e39b5d5e" : "7e663c504dc4b013"}

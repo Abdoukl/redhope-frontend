@@ -11,8 +11,8 @@ import FlipCard from "./components/FlipCard.jsx";
 import PrivateRoute from './components/PrivateRoute';
 import Map from './components/Map.jsx';
 import Loading from "./components/Loading.jsx"; 
-import ScrollProgress from "./components/ScrollProgress.jsx"; // Import the ScrollProgress component
-import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import ScrollProgress from "./components/ScrollProgress.jsx";
+import { HashRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import nprogress from 'nprogress';
 import './styles/nprogress.css';
 
